@@ -96,7 +96,7 @@ Authorization: Bearer <token>
 
 ![login](screenshots/login.png)
 
-`login_fail` - An error message is shown when login is unsuccessful. `Add New Reservation` is still not available, and reservations are not visible. 
+`login_fail.png` - An error message is shown when login is unsuccessful. `Add New Reservation` is still not available, and reservations are not visible. 
 
 ![login_fail](screenshots/login_fail.png)
 
