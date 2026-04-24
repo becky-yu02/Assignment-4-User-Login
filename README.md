@@ -92,6 +92,12 @@ Authorization: Bearer <token>
 
 ![account](screenshots/account_creation.png)
 
-`login.png` - Shown after 
+`login.png` - A messagge is shown for a successful user login. Once user is logged in, the `Add New Reservation` button is now working/available, and users are able to see, create, edit, and delete reservations, similar to the original mid-term project.
+
+![login](screenshots/login.png)
+
+`login_fail` - An error message is shown when login is unsuccessful. `Add New Reservation` is still not available, and reservations are not visible. 
+
+![login_fail](screenshots/login_fail.png)
 
 ---
