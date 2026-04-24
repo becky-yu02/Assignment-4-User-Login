@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Studio Reservations</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body class="py-4">
+  <div class="d-flex justify-content-center mt-3 mb-3 gap-2">
+
+  <input id="username" class="form-control w-25" placeholder="Username" />
+
+  <input id="password" type="password" class="form-control w-25" placeholder="Password" />
+
+  <button id="signup-btn" class="btn btn-outline-primary">
+    Sign Up
+  </button>
+
+  <button id="login-btn" class="btn btn-primary">
+    Login
+  </button>
+
+</div>
+
+<div id="msg-auth" class="text-center text-danger mb-3"></div>
+    <div class="app mx-auto text-center">
+      <div class="h1">Dance Studio Reservations</div>
+      <div class="d-flex justify-content-center mt-4 mb-4">
+        <button
+          class = "addbtn"
+          id="openNewReservationModal"
+          data-bs-toggle="modal"
+          data-bs-target="#modal-create-reservation"
+        >
+          Add New Reservation
+        </button>
+      </div>
+      <div class="container text-center">
+      <div id="reservations" class="row align-items-start">
+        <div id="reservation-room101" class="col"></div>
+        <div id="reservation-room102" class="col"></div>
+        <div id="reservation-room103" class="col"></div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- modal dialog for creating a reservation -->
+    <div id="modal-create-reservation" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">New Reservation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+                <div class="modal-body">
+        <div id="new-reservation-form">
+
+          <div class="mb-3">
+            <label for="start-time" class="form-label">Start Time</label>
+            <input type="datetime-local" class="form-control" id="start-time" />
+          </div>
+
+          <div class="mb-3">
+            <label for="end-time" class="form-label">End Time</label>
+            <input type="datetime-local" class="form-control" id="end-time" />
+          </div>
+
+          <div class="mb-3">
+            <label for="room-number" class="form-label">Room Number</label>
+            <select class="form-control" id="room-number">
+              <option value="101">101</option>
+              <option value="102">102</option>
+              <option value="103">103</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea class="form-control" id="desc" rows="5"></textarea>
+          </div>
+
+          <div class="text-danger" id="msg"></div>
+        </div>
+      </div>
+          <div class="modal-footer">
+            <button
+              id="close-create-modal"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="create-btn" type="button" class="btn btn-primary">
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal dialog for editing a reservation -->
+    <div id="modal-edit-reservation" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Reservation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="edit-reservation-form">
+
+            <div class="mb-3">
+            <label for="start-time-edit" class="form-label">Start Time</label>
+            <input type="datetime-local" class="form-control" id="start-time-edit" />
+          </div>
+
+            <div class="mb-3">
+            <label for="end-time-edit" class="form-label">End Time</label>
+            <input type="datetime-local" class="form-control" id="end-time-edit" />
+          </div>
+
+          <div class="mb-3">
+            <label for="room-number-edit" class="form-label">Room Number</label>
+            <select class="form-control" id="room-number-edit">
+              <option value="101">101</option>
+              <option value="102">102</option>
+              <option value="103">103</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+              <label for="name-edit" class="form-label">Name</label>
+              <input type="text" id="name-edit" class="form-control" />
+              </div>
+
+          <div class="mb-3">
+              <label for="desc-edit" class="form-label">Description</label>
+                <textarea class="form-control" id="desc-edit" rows="5"></textarea>
+              </div>
+
+              <div class="text-danger" id="msg-edit"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="close-edit-modal"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="edit-btn" type="button" class="btn btn-warning">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+</body>
+</html>

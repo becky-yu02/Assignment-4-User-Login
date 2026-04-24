@@ -1,0 +1,82 @@
+html,
+
+body {
+    background-color: white;
+}
+
+button.addbtn {
+    background-color: #F5C4C9;
+    color: black;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+}
+
+button.btn-primary {
+    background-color:#ffc0cb;
+    color: black;
+    border: 2px solid #ffc0cb;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+}
+
+button.btn-primary:hover {
+    background-color:#e3bcbc;
+    color: black;
+    border: 2px solid #e3bcbc;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+}
+
+button.btn-warning {
+    background-color:#ffc0cb;
+    color: black;
+    border: 2px solid #ffc0cb;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+}
+
+button.btn-warning:hover {
+    background-color:#e3bcbc;
+    color: black;
+    border: 2px solid #e3bcbc;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: auto;
+}
+
+button.btn-success {
+    background-color: #f7cac9;
+    color: black;
+    border: 2px solid #f7cac9;
+    width: auto;
+}
+
+button.btn-success:hover {
+    background-color: #ffd0d0;
+    color: black;
+    border: 2px solid #ffd0d0;
+    width: auto;
+}
+
+button.btn-danger {
+    background-color:#f8d3c5;
+    color: black;
+    border: 2px solid #f8d3c5;
+    width: auto;
+}
+
+button.btn-danger:hover {
+    background-color:#dbb7bc;
+    color: black;
+    border: 2px solid #dbb7bc;
+    width: auto;
+}
+
+.reservation-box {
+    background-color:#dde6d5 ;
+    border: 2px solid #667b68;
+}
